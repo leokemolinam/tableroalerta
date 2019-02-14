@@ -5,23 +5,24 @@
  */
 package tableroalerta;
 import java.awt.Color;
-import javax.swing.JFrame;
+import java.util.ArrayList;
+import java.util.List;
 /**
  *
  * @author estudiantes
  */
 public class Main{
-    public static void main(String[] args) {        
-        Carro carroControlado = new Carro(200, 100, 10, 10, Color.RED);
-        Carro carroAleatorio = new Carro(200, 50, 20, 20, Color.GREEN);
-        Tablero tabVentana = new Tablero(Color.BLACK, 500, 500);        
-        Controlador cont = new Controlador(carroControlado, carroAleatorio, tabVentana); 
-        JFrame.setDefaultLookAndFeelDecorated(true);
-        JFrame frame = new JFrame("Bouncing Ball");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);       
-        frame.setSize(tabVentana.getAncho(), tabVentana.getAlto());        
-        frame.setContentPane(cont);        
-        frame.setVisible(true);
+    public static void main(String[] args) {
+    	List<Carro> listCarros = new ArrayList<>();
+        Carro carroControlado = new Carro(200, 100, 10, 10, Color.RED, Carro.CARRO_ALEATORIO, 3, 3);
+        Carro carroAleatorio = new Carro(200, 50, 20, 20, Color.GREEN, Carro.CARRO_ALEATORIO, 3, 3);
+        Carro carroOtro = new Carro(20, 5, 20, 20, Color.BLUE, Carro.CARRO_ALEATORIO, 3, 2);
+        Carro carroOtroa = new Carro(20, 5, 20, 20, Color.CYAN, Carro.CARRO_ALEATORIO, 5, 3);
+        listCarros.add(carroControlado);
+        listCarros.add(carroAleatorio);
+        listCarros.add(carroOtro);
+        listCarros.add(carroOtroa);
+        new Tablero(Color.BLACK, 500, 500, listCarros);                
     }
 }
 

@@ -6,6 +6,19 @@ Proyecto donde se agregan varios carros que se mueven aleatoriamiente en un tabl
 # Intalación
   - Se debe descargar el proyecto e importar en un IDE como Eclipse o NetBeans
   - Luego se debe correr como "Java Application" la clase Main.java ubicada en src/tableroalerta 
+  
+# Documentacion
+
+  Diagrama de Clases:
+  
+   ![alt text](http://drive.google.com/uc?export=view&id=1XjYX7lNpwTtvVsAq8H0Z9Z8aEsFWvlgY)
+   
+   
+  Diagrama de Casos de uso:
+  
+   ![alt text](http://drive.google.com/uc?export=view&id=17a9XGQn3CoXjo0rtxCDUox4q79CwjoXj)
+  
+  
 # Conctacto
   El proyecto se realiza por:
   

@@ -17,10 +17,10 @@ import javax.swing.JFrame;
  */
 public class Tablero{
     
-    Color colorFondo;
-    int ancho;
-    int alto;
-    JFrame frame;
+	private Color colorFondo;
+	private int ancho;
+	private int alto;
+	private JFrame frame;
     
    
     public Color getColorFondo() {
@@ -55,19 +55,20 @@ public class Tablero{
 		this.frame = frame;
 	}
 
-	public Tablero(Color colorFondo, int ancho, int alto, List<Carro> listCarros){
+	public Tablero(Color colorFondo, int ancho, int alto){		
         this.colorFondo = colorFondo;
         this.ancho = ancho;
         this.alto = alto;        
-        
-        Controlador controlador = new Controlador(listCarros);        
+    }
+    
+	public void iniciar(List<Carro> listCarros) {
+		Controlador controlador = new Controlador(listCarros);        
         JFrame.setDefaultLookAndFeelDecorated(true);
-        JFrame frame = new JFrame("Bouncing Ball");
+        JFrame frame = new JFrame("Tablero Colisionador");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);       
         frame.setSize(this.ancho,  this.alto);    
         frame.setContentPane(controlador);
         frame.setVisible(true);
-    }
-    
+	}
     
 }

@@ -10,18 +10,14 @@ import java.awt.Color;
 
 public class Carro {
     
-    Color color;
-    int posicionX;
-    int posicionY;
-    int ancho;
-    int alto;
-    int tipo;
-    int dx;
-    int dy;
-    
-    public static int CARRO_ALEATORIO = 1;
-    public static int CARRO_CONTROLADO = 2;
-
+    private Color color;
+    private int posicionX;
+    private int posicionY;
+    private int ancho;
+    private int alto;    
+    private int dx;
+    private int dy;
+        
     public Color getColor() {
         return color;
     }
@@ -61,22 +57,14 @@ public class Carro {
     public void setAlto(int alto) {
         this.alto = alto;
     }
- 
-    public int getTipo() {
-		return tipo;
-	}
+     
 
-	public void setTipo(int tipo) {
-		this.tipo = tipo;
-	}
-
-	public Carro(int iniX, int iniY, int ancho, int alto, Color color, int tipo, int dx, int dy){        
+	public Carro(int iniX, int iniY, int ancho, int alto, Color color, int dx, int dy){        
         this.posicionX = iniX;
         this.posicionY = iniY;
         this.ancho = ancho;
         this.alto = alto;
-        this.color = color;
-        this.tipo = tipo;
+        this.color = color;       
         this.dx = dx;
         this.dy = dy;
     }
@@ -97,23 +85,23 @@ public class Carro {
 		this.dy = dy;
 	}
 
-	public void moverCarro(int width, int height){
+	public void moverCarro(int anchoEspacio, int altoEspacio){
 		posicionX = posicionX + dx;
     	posicionY = posicionY + dy;
         if (posicionX < 0) {
         	dx = -dx;
         	posicionX = 0; 
-        } else if (posicionX > width) {
+        } else if (posicionX > anchoEspacio) {
         	dx = -dx;
-        	posicionX = width;
+        	posicionX = anchoEspacio;
         }
         
         if (posicionY < 0) {
         	dy = -dy;
         	posicionY = 0;
-        } else if (posicionY > height) {
+        } else if (posicionY > altoEspacio) {
         	dy = -dy;
-        	posicionY = height;
+        	posicionY = altoEspacio;
         }
     }
     

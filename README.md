@@ -1,5 +1,8 @@
 # tableroalerta
 Proyecto donde se agregan varios carros que se mueven aleatoriamiente en un tablero donde se detectan colisiones mostrando un mensaje de alerta
+
+![alt text](http://drive.google.com/uc?export=view&id=1Nub9NawXDCVXSEz9aZmy4kexiVKcdpG7)
+
 # Intalación
   - Se debe descargar el proyecto e importar en un IDE como Eclipse o NetBeans
   - Luego se debe correr como "Java Application" la clase Main.java ubicada en src/tableroalerta 

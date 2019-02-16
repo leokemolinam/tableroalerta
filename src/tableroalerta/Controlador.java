@@ -36,7 +36,7 @@ public class Controlador extends JPanel {
 
 					}
 					try {
-						Thread.sleep(10);
+						Thread.sleep(30);
 					} catch (InterruptedException ex) {
 					}
 				}
@@ -59,8 +59,23 @@ public class Controlador extends JPanel {
 			Carro carroComp = listCarros.get(i);
 			for (int j = i + 1; j < listCarros.size(); j++) {
 				Carro carro = listCarros.get(j);
-				if (carroComp.getPosicionX() == carro.getPosicionX()
-						&& carroComp.getPosicionY() == carro.getPosicionY()) {
+				if (((carroComp.getPosicionX() < (carro.getPosicionX() + carro.getAncho()) && 
+					 (carroComp.getPosicionX() >= carro.getPosicionX())) ||	
+					((carro.getPosicionX() < (carroComp.getPosicionX() + carroComp.getAncho()) && 
+					 (carro.getPosicionX() >= carroComp.getPosicionX())))) &&
+					((carroComp.getPosicionY() < (carro.getPosicionY() + carro.getAlto()) && 
+					 (carroComp.getPosicionY() >= carro.getPosicionY())) ||	
+					((carro.getPosicionY() < (carroComp.getPosicionY() + carroComp.getAlto()) && 
+					 (carro.getPosicionY() >= carroComp.getPosicionY()))))
+					){
+					if((carroComp.getDx() > 0 && carro.getDx() < 0) ||(carroComp.getDx() < 0 && carro.getDx() > 0)) {
+						carro.setDx(-carro.getDx());
+						carroComp.setDx(-carroComp.getDx());
+					}
+					if((carroComp.getDy() > 0 && carro.getDy() < 0)||(carroComp.getDy() < 0 && carro.getDy() > 0)) {
+						carro.setDy(-carro.getDy());
+						carroComp.setDy(-carroComp.getDy());
+					}
 					JOptionPane.showMessageDialog(null, "OHHHH COLISIONARON Carro [" + i + "] y el Carro [" + j + "]");
 				}
 			}

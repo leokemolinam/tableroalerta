@@ -6,9 +6,9 @@ Proyecto donde se agregan varios carros que se mueven aleatoriamiente en un tabl
 # Conctacto
   El proyecto se realiza por:
   
-  RODRIGUEZ GONZALEZ CARLOS HERNANDO ->  crodriguezg25@gmail.com
-  PACACIRA GOMEZ IVAN ANDRES         ->  wer2442@hotmail.com
-  MOLINA MUNEVAR OSCAR HERNAN        ->  ohmolinam@hotmail.com
+  - RODRIGUEZ GONZALEZ CARLOS HERNANDO ->  crodriguezg25@gmail.com
+  - PACACIRA GOMEZ IVAN ANDRES         ->  wer2442@hotmail.com
+  - MOLINA MUNEVAR OSCAR HERNAN        ->  ohmolinam@hotmail.com
   
 # Licencia
 
